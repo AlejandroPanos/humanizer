@@ -115,7 +115,7 @@ def main():
         if not HAVE_CLIPBOARD:
             sys.exit("pyperclip not installed.")
         pyperclip.copy(result)
-        print("✅ Copied to clipboard.")
+        print("⌵⌵⌵⌵⌵ Text generated and copied to clipboard. ⌵⌵⌵⌵⌵")
 
     print(result)
 
