@@ -4,3 +4,10 @@
 import argparse
 import sys
 import anthropic
+
+try:
+    import pyperclip
+
+    HAVE_CLIPBOARD = True
+except ImportError:
+    HAVE_CLIPBOARD = False
