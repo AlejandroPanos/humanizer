@@ -31,10 +31,10 @@ def main():
     parser = argparse.ArgumentParser(description="Humanize AI generated text")
     parser.add_argument("text", nargs="?", help="Text to humanize (optional)")
     parser.add_argument(
-        "-c", "--clipboard", action="store-true", help="Read input from clipboard"
+        "-c", "--clipboard", action="store_true", help="Read input from clipboard"
     )
     parser.add_argument(
-        "-o", "--copy", action="store-true", help="Copy result to clipboard"
+        "-o", "--copy", action="store_true", help="Copy result to clipboard"
     )
     parser.add_argument("--model", default="claude-sonnet-5")
     args = parser.parse_args()
