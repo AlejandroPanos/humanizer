@@ -75,7 +75,10 @@ def humanize(text: str, model: str) -> str:
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": text}],
     )
-    return response.content[0].text
+    for block in response.content:
+        if block.type == "text":
+            return block.text
+    raise RuntimeError("No text content in response.")
 
 
 def main():
